@@ -1,5 +1,5 @@
 header {
-    background-color: white;
+    background-color: rgb(218, 0, 0);
     margin: 0;
     position: fixed;
     height: 80px;
@@ -19,11 +19,29 @@ body{
     font-size: 18px;
 } 
 
-.texto p{
+.imagen-referencias p{
     background-color: white;
     border: 5px solid rgb(0, 0, 0);
     border-radius: 25px;
     padding: 10px;
+}
+
+.cuadro{
+    background-color: white;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    justify-content: flex-start; /* Alinear horizontalmente */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    margin: 20px; /* Espacio alrededor del contenedor */
+}
+
+.cuadro img{
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    margin: 20px; /* Espacio alrededor del contenedor */
 }
 
 .imagen-referencias {
@@ -36,11 +54,6 @@ body{
     backdrop-filter: blur(15px);
     border-radius: 15px;
     text-align: center;
-}
-.imagen-referencias a {
-    list-style-type: none;
-    color: black; /* Cambiado a negro para mayor visibilidad */
-    text-decoration: none;
 }
 
 .imagen-referencias a:hover{
@@ -110,7 +123,8 @@ body{
 
 .imagen-referencias a{
     list-style-type: none;
-    color: black;
+    color: black; /* Cambiado a negro para mayor visibilidad */
+    text-decoration: none;
 }
 
 .imagen-referencia img {
@@ -149,7 +163,7 @@ nav {
 .menu a {
     text-decoration: none;
     font-size: 18px;
-    color: black;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center; /* Alinear verticalmente el texto dentro del enlace */
     height: 100%; /* El enlace ocupa toda la altura del elemento de la lista */
@@ -157,12 +171,14 @@ nav {
 }
 
 .menu ul li a:hover {
-    background-color: #e2e2e2; /* Color de fondo en hover */
-    color: black;
+    background-color: rgb(255, 0, 0); /* Color de fondo en hover */
+    color: white;
 }
 
 .Logo {
+    background-color: white;
     height: 70px;
+    width: 160px;
     text-align: center;
     border-radius: 10px;
     display: flex;
