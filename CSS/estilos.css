@@ -1,60 +1,106 @@
 header {
     background-color: rgb(218, 0, 0);
     margin: 0;
+    top: 0;
     position: fixed;
     height: 80px;
     z-index: 10;
     display: flex; /* Hacer que el contenedor sea flexible */
     justify-content: center; /* Centrar horizontalmente los elementos */
     align-items: center; /* Centrar verticalmente los elementos */
-    top: 0;
     width: 100%;
-    left: 0;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    display: flex; /* Usar flexbox para los elementos de la lista */
+    gap: 40px; /* Espacio entre los elementos de la lista */
+}
+
+.menu li {
+    height: 80px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px; /* Padding lateral opcional */
+}
+
+.menu ul li a:hover {
+    background-color: rgb(255, 0, 0); /* Color de fondo en hover */
+}
+
+.Logo {
+    background-color: white;
+    height: 70px;
+    width: 160px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 
 body{
-    height: 100%;
-    margin: 0; /* Elimina el margen por defecto del cuerpo del documento */
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
     font-size: 18px;
 } 
-
-.imagen-referencias p{
-    background-color: white;
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 25px;
-    padding: 10px;
-}
 
 .cuadro{
     background-color: white;
     border: 5px solid rgb(0, 0, 0);
     border-radius: 25px;
-    padding: 10px;
     display: flex;
-    align-items: center; /* Alinear verticalmente */
-    justify-content: flex-start; /* Alinear horizontalmente */
-    gap: 20px; /* Espacio entre la imagen y el texto */
-    margin: 20px; /* Espacio alrededor del contenedor */
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 20px;
+    -webkit-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+}
+
+.cuadroseparado{
+    background-color: white;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 20px;
+    gap: 200px;
+    -webkit-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
 }
 
 .cuadro img{
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px;
     border-radius: 25px;
-    margin: 20px; /* Espacio alrededor del contenedor */
+    margin: 10px; /* Espacio alrededor del contenedor */
 }
 
 .imagen-referencias {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    margin: 0px auto;
-    max-width: 100%;
     padding: 0  0 80px;
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    text-align: center;
 }
+
+.imagen-referencias a{
+    color: black;
+    text-decoration: none;
+}
+
+.imagen-referencias p{
+    background-color: white;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 25px;
+}
+
 
 .imagen-referencias a:hover{
     list-style-type: none;
@@ -63,12 +109,9 @@ body{
 }
 
 .imagen-referencia {
-    perspective: 1000px; /* Perspectiva para el efecto 3D */
     position: relative;
-    margin: 10px;
-    width: 200px; /* Ancho ajustado según tu diseño */
-    height: 300px; /* Altura ajustada según tu diseño */
-    overflow: hidden; /* Para ocultar partes que sobresalgan */
+    width: 200px;
+    height: 300px;
 }
 
 .imagen-referencia .front,
@@ -76,7 +119,7 @@ body{
     position: absolute;
     width: 100%;
     height: 90%;
-    backface-visibility: hidden; /* Oculta la parte trasera */
+    backface-visibility: hidden;
     transition: transform 0.6s;
 }
 
@@ -84,7 +127,6 @@ body{
 .imagen-referencia .back {
     width: 100%; /* Ajustar el tamaño de la imagen al contenedor */
     height: 90%; /* Ajustar el tamaño de la imagen al contenedor */
-    border-radius: 10px; /* Añadir borde redondeado si es necesario */
 }
 
 .imagen-referencia .back {
@@ -100,96 +142,27 @@ body{
 }
 
 .imagen-referencia .back p {
-    padding: 10px;
-    background-color: white(0, 0, 0, 0.8);
+    padding: 15px;
     color: black;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imagen-referencia:hover .back p {
-    opacity: 1; /* Muestra la descripción al pasar el mouse */
-}
-
-.imagen-referencias a{
-    list-style-type: none;
-    color: black; /* Cambiado a negro para mayor visibilidad */
-    text-decoration: none;
-}
-
 .imagen-referencia img {
-    width: 200px; /* Ajusta según tu preferencia */
+    width: 200px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 25px;
+    -webkit-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
 }
 
-.imagen-referencia p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: black;
-}
-
-nav {
-    height: 100%; /* Asegurarse de que el nav ocupe toda la altura */
-}
-
-.menu {
-    display: flex;
-    align-items: center; /* Alinear verticalmente los enlaces */
-}
-
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Usar flexbox para los elementos de la lista */
-    gap: 25px; /* Espacio entre los elementos de la lista */
-}
-
-.menu ul li {
-    height: 80px; /* Ajustar la altura de los elementos de la lista */
-}
-
-.menu a {
-    text-decoration: none;
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center; /* Alinear verticalmente el texto dentro del enlace */
-    height: 100%; /* El enlace ocupa toda la altura del elemento de la lista */
-    padding: 0 10px; /* Padding lateral opcional */
-}
-
-.menu ul li a:hover {
-    background-color: rgb(255, 0, 0); /* Color de fondo en hover */
-    color: white;
-}
-
-.Logo {
-    background-color: white;
-    height: 70px;
-    width: 160px;
-    text-align: center;
-    border-radius: 10px;
-    display: flex;
-    align-items: center; /* Alinear verticalmente el logo */
-    margin-right: 20px; /* Añadir margen derecho para separar del menú */
-}
 
 .videoF {
     position: fixed;
-    right: 0;
-    bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: 1;
@@ -198,34 +171,53 @@ nav {
 .texto {
     position: relative;
     top: 70px;
-    width: calc(100% - 60px); /* Restar los márgenes del body */
-    margin: 10px 30px;
     text-align: center;
     z-index: 2;
     color: black;
 }
 
+.textonosotros {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    color: black;
+    top: 100px;
+    height: 900px;
+}
+
+.textocontactenos {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    color: black;
+    top: 100px;
+    height: 900px;
+}
+
+.textohorayubi {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    color: black;
+    top: 100px;
+    height: 870px;
+}
 /*Carrusel*/
 
 .carrusel {
     position: relative;
     top: 80.4px;
-    width: calc(100% - 60px); /* Restar los márgenes del body */
-    margin: 0 30px; /* Alineado con el margen de .texto */
     height: 400px;
-    overflow: hidden;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
     z-index: 2; /* Asegura que el carrusel esté encima del video */
-    border-radius: 15px;
 }
 
 .carrusel-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
 }
 
 .carrusel-slide {
-    display: none; /* Ocultar todas las imágenes por defecto */
+    display: none;
     margin: auto;
     min-width: 400px;
     min-height: 400px;
@@ -239,12 +231,9 @@ nav {
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para los botones */
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
 }
 
 .prev {
@@ -258,37 +247,19 @@ nav {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 
 /*Footer*/
 footer {
-    position: relative; /* Cambiar a relative */
+    position: relative;
     width: 100%;
-    left: 0;
+    height: 250px;
     text-align: left;
     z-index: 11;
     background-color: white;
-    /*backdrop-filter: blur(15px);*/
 }
-
-.adgoogle{
-    position: relative;
-    top: 80.5px;
-    width: calc(100% - 60px); /* Restar los márgenes del body */
-    margin: 10px 30px;
-    text-align: center;
-    z-index: 2;
-    backdrop-filter: blur(15px);
-    color: white;
-}
-
-.sofia-regular {
-    font-family: "Sofia", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
 
 .footer-links ul{
     list-style-type: none;
@@ -300,7 +271,6 @@ footer {
 }
 
 .footer-links a:hover{
-    text-decoration: none;
     color: gray;
 }
 
@@ -308,7 +278,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -322,13 +292,75 @@ footer {
     position: relative;
     width: 100%;
     text-align: center;
-    z-index: 11;
     color: black;
     font-size: 14px;
 }
 
 * {
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Sofia';
+}
+
+.sofia-regular {
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .boton {
+	box-shadow: 5px 6px 9px -3px #4d4d4d;
+	background-color:#ff0000;
+	border-radius:28px;
+	border:1px solid #f20000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.boton:hover {
+	background-color:#cc0000;
+}
+.boton:active {
+	position:relative;
+	top:1px;
+}
+
+textarea {
+    resize: none; 
+    width: 300px;
+    height: 200px;
+  }
+
+.contactanos{
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+}
+
+form{
+    width: 500px;
+}
+
+.horario{
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 25px;
+    -webkit-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+}
+
+iframe{
+    border: 2px solid black;
+    border-radius: 25px;
+    -webkit-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 11px 15px 19px 0px rgba(0,0,0,0.75);
 }

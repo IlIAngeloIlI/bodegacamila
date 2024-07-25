@@ -10,43 +10,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
 </head>
-<header class="barra">
-    <img src="" alt="">
-    <div class="Logo">
-        <img src="images/BC.png" alt="LOGO" width="155" height="60">
-    </div>
-    <div class="menu">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contactenos.html">Contáctenos</a></li>
-                <li><a href="horayubi.html">Horario y Ubicación</a></li>
-                <li><a href="indexB.html"><img src="icon/oscuro.png" width="50" height="50" alt="Modo Oscuro"></a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 <body>
+    <header class="barra">
+        <img src="" alt="">
+        <div class="Logo">
+            <img src="images/BC.png" alt="LOGO" width="155" height="60">
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contactenos.html">Contáctenos</a></li>
+                    <li><a href="horayubi.html">Horario y Ubicación</a></li>
+                    <li><a href="indexB.html"><img src="icon/oscuro.png" width="50" height="50" alt="Modo Oscuro"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <video autoplay muted loop class="videoF">
         <source src="video/Background.mp4" type="video/mp4">
     </video>
-    <div class="texto">
-
-    </div>
-</body>
-<footer>
+    <div class="textocontactenos">
+        <h1><u><b>CONTÁCTENOS</b></u></h1>
+        <div class="cuadroseparado">
+            <form action="" class="contactanos">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre"><br><br>
+                <label for="Asunto">Asunto:</label>
+                <input type="text" name="Asunto" id="Asunto" placeholder="Ingrese el asunto"><br><br>
+                <label for="Celular">Celular:</label>
+                <input type="tel" name="Celular" id="Celular" placeholder="Ingrese su número" maxlength="9"><br><br>
+                <label for="Comentarios">Comentarios:</label><br>
+                <textarea name="Comentarios" id="Comentarios"></textarea><br><br>
+                <input type="submit" class="boton" value="Enviar">
+                <input type="reset" class="boton" value="Cancelar">
+            </form>
+            <img class="imgnc" src="images/contactenos.png" width="750px" height="550px">
+        </div>    
+    <footer>
         <div class="footer-container">
             <div class="logo-social">
                 <div class="logo-footer">
                     <img src="images/BC.png" alt="LOGO" width="235" height="100">
                 </div>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/" target="_blank"><img src="icon/fbB.png" width="50" height="50" alt="Facebook"></a>
-                    <a href="https://www.youtube.com/" target="_blank"><img src="icon/ytB.png" width="50" height="50" alt="YouTube"></a>
-                    <a href="https://www.instagram.com/?hl=es" target="_blank"><img src="icon/igB.png" width="50" height="50" alt="Instagram"></a>
-                    <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><img src="icon/wspB.png" width="50" height="50" alt="WhatsApp"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="icon/fb.png" width="50" height="50" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="icon/yt.png"  width="50" height="50" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/?hl=es" target="_blank"><img src="icon/ig.png" width="50" height="50" alt="Instagram"></a>
+                    <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><img src="icon/wsp.png" width="50" height="50" alt="WhatsApp"></a>
                 </div>
             </div>
         <div class="footer-links center-links">
@@ -69,5 +82,6 @@
             Bodega Camila - Todos los derechos reservados 2024
         </p>
     </div>
-</footer>
+    </footer>
+</body>
 </html>
